@@ -1,0 +1,23 @@
+---
+- name: Setup a basic web server
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Install NGINX on Arch-based systems
+      pacman:
+        name: nginx
+        state: present
+        update_cache: true
+      when: ansible_facts['os_family'] == "Archlinux"
+
+    - name: Start NGINX service
+      systemd:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: Deploy index.html
+      copy:
+        src: files/index.html
+        dest: /usr/share/nginx/html/index.html
+        mode: '0644'

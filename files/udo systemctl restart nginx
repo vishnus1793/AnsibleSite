@@ -1,0 +1,17 @@
+[0;1;32m●[0m nginx.service - nginx web server
+     Loaded: loaded (]8;;file://Igris/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Sat 2025-06-14 11:56:36 IST; 2min 59s ago
+ Invocation: d87bd1583bb44794ba7d6c692456fa31
+    Process: 82701 ExecStart=/usr/bin/nginx (code=exited, status=0/SUCCESS)
+   Main PID: 82702 (nginx)
+      Tasks: 2[0;38;5;245m (limit: 18388)[0m
+     Memory: 4.1M (peak: 4.9M)
+        CPU: 22ms
+     CGroup: /system.slice/nginx.service
+             ├─[0;38;5;245m82702 "nginx: master process /usr/bin/nginx"[0m
+             └─[0;38;5;245m82703 "nginx: worker process"[0m
+
+Jun 14 11:56:36 Igris systemd[1]: Starting nginx web server...
+Jun 14 11:56:36 Igris nginx[82701]: [0;1;31m[0;1;39m[0;1;31m2025/06/14 11:56:36 [warn] 82701#82701: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size[0m
+Jun 14 11:56:36 Igris systemd[1]: Started nginx web server.
+Jun 14 11:57:10 Igris nginx[82703]: [0;1;31m[0;1;39m[0;1;31m2025/06/14 11:57:10 [error] 82703#82703: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"[0m
