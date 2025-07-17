@@ -1,7 +1,5 @@
 # AnsibleSite
 
----
-
 ## ⚙️ Requirements
 
 - ✅ Ansible installed on your system  
